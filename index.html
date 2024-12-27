@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="collection active" data-collection="school">School</div>
+            <div class="collection" data-collection="personal">Personal</div>
+            <div class="collection" data-collection="design">Design</div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h2 id="current-collection">School</h2>
+                <button id="add-task"> + Add Task</button>
+            </div>
+            <div class="task-lists">
+                <div class="task-list" id="tasks">
+                    <h3>Tasks</h3>
+                </div>
+                <div class="task-list" id="completed">
+                    <h3>Completed</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <input type="text" id="new-task-input" placeholder="Enter task">
+            <button id="save-task">Save Task</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

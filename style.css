@@ -1,0 +1,203 @@
+/* style.css */
+
+/* Basic Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #eee;
+    display: flex;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Container and Layout */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #1e1e1e;
+    width: 250px; /* Increased sidebar width */
+    padding: 20px;
+    border-right: 1px solid #333; /* Added a right border */
+}
+
+.collection {
+    padding: 12px; /* Increased padding */
+    cursor: pointer;
+    margin-bottom: 8px; /* Increased margin */
+    border-radius: 6px; /* Slightly more rounded corners */
+    transition: background-color 0.2s;
+}
+
+.collection.active,
+.collection:hover {
+    background-color: #333;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#add-task {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px; /* Increased padding */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+#add-task:hover {
+    background-color: #45a049;
+}
+
+.task-lists {
+    display: flex;
+    gap: 20px;
+}
+
+.task-list {
+    flex: 1;
+    border: 1px solid #333;
+    padding: 15px; /* Increased padding */
+    border-radius: 6px;
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+.task-list h3 {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.task {
+    background-color: #282828;
+    padding: 12px; /* Increased padding */
+    margin-bottom: 8px; /* Increased margin */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s ease;
+}
+.task:hover{
+    background-color: #383838;
+}
+
+.task button {
+    margin-left: 8px;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.task .complete-btn {
+    background-color: #5cb85c;
+}
+.task .complete-btn:hover{
+    background-color: #4cae4c;
+}
+
+.task button:hover {
+    background-color: #c9302c;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #282828;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #333;
+    width: 35%; /* Slightly wider modal */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    color: #eee;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #fff;
+}
+
+#new-task-input {
+    width: calc(100% - 22px);
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #eee;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s; /* Added transitions */
+}
+
+#new-task-input:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+#save-task {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#save-task:hover {
+    background-color: #45a049;
+}
